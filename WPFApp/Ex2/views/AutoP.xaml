@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Ex2.AutoP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Ex2"
+        mc:Ignorable="d"
+        d:DesignWidth="800" d:DesignHeight="450">
+    <Grid>
+        <ScrollViewer Margin="0,0,0.667,10">
+            <StackPanel>
+                <TextBox x:Name="commands" Height="350"  Text="{Binding scriptProperty, UpdateSourceTrigger=PropertyChanged}" Background="{Binding brush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True" />
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button Content="Ok" Margin="10" FontWeight="Bold" Command="{Binding okCommandP}" />
+                    <Button Content="Cancel" Margin="10" FontWeight="Bold" Command="{Binding cancelCommandP}" />
+                </WrapPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
